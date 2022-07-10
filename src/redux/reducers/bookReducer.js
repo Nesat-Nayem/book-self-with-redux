@@ -12,6 +12,11 @@ function bookReucer(state = initialState , action) {
       return newState;
     }
 
+    case "ADD_TO_FINISH_LIST":{
+      const newState = {...state, finishList:[ ...state.finishList,action.payload]}
+      return newState
+    }
+
     case "REMOVE_FROM_READING_LIST": {
       const newState = { ...state, readingList : state.readingList.filter((book) => book.id !== action.payload) }
        
