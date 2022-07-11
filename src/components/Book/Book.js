@@ -8,6 +8,7 @@ import {
 import styles from './book.module.css'
 import { addToFinishList, addtoReadingList, removeFromReadingList } from "../../redux/actions/bookAction";
 const SingleBook = (props) => {
+  console.log(props)
 
   const { title, author, coverImageUrl, synopsis } = props.book;
   const dispatch = useDispatch()
@@ -29,10 +30,11 @@ const SingleBook = (props) => {
       </div>
       <div className={styles.control_icons} >
        
-        <HiMinusCircle onClick={()=>dispatch(removeFromReadingList(props.book.id))} title="Remove from list" className={styles.minus_icon} />
+        {/* <HiMinusCircle onClick={()=>dispatch(removeFromReadingList(props.book.id))} title="Remove from list" className={styles.minus_icon} /> */}
         {/* <HiMinusCircle onClick={()=>console.log(props.book.id)} title="Remove from list" className={styles.minus_icon} /> */}
+
         <HiPlusCircle onClick={()=>dispatch(addtoReadingList(props.book))} title="Add to Reading" className={styles.plus_icon} />
-        <HiCheckCircle onClick={()=> dispatch(addToFinishList(props.book))} title="Mark as Finish" className={styles.check_icon} />
+        {/* <HiCheckCircle onClick={()=> dispatch(addToFinishList(props.book))} title="Mark as Finish" className={styles.check_icon} /> */}
       </div>
     </div>
   );
