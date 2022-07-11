@@ -49,7 +49,7 @@ const ReadingList = () => {
                   <HiMinusCircle onClick={()=>dispatch(removeFromReadingList(book.id))} title="Remove from list" className={styles.minus_icon} />
                   {/* <HiMinusCircle onClick={()=>console.log(props.book.id)} title="Remove from list" className={styles.minus_icon} /> */}
                   
-                  <HiPlusCircle onClick={()=>dispatch(addtoReadingList(book))} title="Add to Reading" className={styles.plus_icon} />
+                  {/* <HiPlusCircle onClick={()=>dispatch(addtoReadingList(book))} title="Add to Reading" className={styles.plus_icon} /> */}
                   <HiCheckCircle onClick={()=> dispatch(addToFinishList(book))} title="Mark as Finish" className={styles.check_icon} />
                 </div>
               </div>))

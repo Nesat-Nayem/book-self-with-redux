@@ -18,3 +18,10 @@ export function addToFinishList (payload){
         payload
     }
 }
+
+export function removeFromFinishList (payload){
+    return{
+        type:'REMOVE_FROM_FINISH_LIST',
+        payload
+    }
+}

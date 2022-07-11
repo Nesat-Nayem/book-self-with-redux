@@ -1,11 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { 
+  HiMinusCircle
+} from 'react-icons/hi';
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Book from "../components/Book/Book";
 import PageLayout from "../components/PageLayout/PageLayout";
+import { removeFromFinishList } from "../redux/actions/bookAction";
 import styles from './finishList.module.css'
 const FinishedBooks = () => {
   const finishList = useSelector((state)=>state.books.finishList)
+
+  const dispatch = useDispatch()
+
   return (
     <PageLayout>
  {
@@ -38,7 +45,7 @@ const FinishedBooks = () => {
     </div>
     <div className={styles.control_icons} >
      
-      {/* <HiMinusCircle onClick={()=>dispatch(removeFromReadingList(book.id))} title="Remove from list" className={styles.minus_icon} /> */}
+      <HiMinusCircle onClick={()=>dispatch(removeFromFinishList(book.id))} title="Remove from list" className={styles.minus_icon} />
       {/* <HiMinusCircle onClick={()=>console.log(props.book.id)} title="Remove from list" className={styles.minus_icon} /> */}
       
       {/* <HiPlusCircle onClick={()=>dispatch(addtoReadingList(book))} title="Add to Reading" className={styles.plus_icon} /> */}

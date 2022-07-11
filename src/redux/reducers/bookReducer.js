@@ -22,6 +22,10 @@ function bookReucer(state = initialState , action) {
        
       return newState;
     }
+    case "REMOVE_FROM_FINISH_LIST":{
+      const newState = {...state, finishList : state.finishList.filter((book)=> book.id !== action.payload)}
+      return newState;
+    }
     default:
       return state;
   }
