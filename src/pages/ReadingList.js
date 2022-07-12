@@ -15,6 +15,7 @@ const ReadingList = () => {
 //     console.log(props)
     
 //   const { title, author, coverImageUrl, synopsis } = props.book;
+// new commit 
     const readingList = useSelector((state)=>state.books.readingList)
 
     const dispatch = useDispatch()
