@@ -2,16 +2,13 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
-
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBzQhKKin12NnLtQGUtJdrofux2awqs2uo",
-  authDomain: "glory-shop.firebaseapp.com",
-  projectId: "glory-shop",
-  storageBucket: "glory-shop.appspot.com",
-  messagingSenderId: "1082999827703",
-  appId: "1:1082999827703:web:f56359ee8d923bb8a077f2"
+  apiKey: "AIzaSyAcm-a_Ru2JkAUJh2JpFaD1aDu0epNBsjI",
+  authDomain: "book-list-384be.firebaseapp.com",
+  projectId: "book-list-384be",
+  storageBucket: "book-list-384be.appspot.com",
+  messagingSenderId: "195335330449",
+  appId: "1:195335330449:web:d2bc48cfb4ff7cbd303d30"
 };
 
 
